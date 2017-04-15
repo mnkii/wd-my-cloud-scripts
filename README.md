@@ -34,4 +34,22 @@ cat nohup.out
 
 Usage: `php duplicate-file-finder.php PATH`
 
-Recursively searches PATH (without following symlinks) for files with duplicate content, regardless of filename. Writes found duplicates in CSV format to stdout, with all occurrence of the file appearing across the row. You can then import the output to Excel, pipe to xargs etc.
+Recursively searches PATH (without following symlinks) for files with identical content, regardless of filename. Writes found duplicates in CSV format to stdout, with all occurrence of the file appearing across the row. You can then import the output to Excel, pipe to xargs etc.
+
+Example: `php duplicate-file-finder.php /shares`
+
+### Find files which you have not yet copied onto your NAS: find-not-yet-copied-to-my-cloud.php
+
+Usage: `php find-not-yet-copied-to-my-cloud.php SOURCE DESTINATION`
+
+Prints a list of files in SOURCE but not in DESTINATION to stdout. Searches by file content rather than file name. Usefull for getting a list of files on a USB device (such as your cameras SD card, SOURCE) plugged directly into the NAS, which you have not yet copied onto you NAS (DESTINATION).
+
+Example: `php find-not-yet-copied-to-my-cloud.php /var/media/USB_Storage/ /shares`
+
+### Find all files with identical content to a given file: find-file-by-content.sh
+
+Usage: `bash find-file-by-content.sh NEEDLE HAYSTACK`
+
+Prints all files in directory or subdirectory of HAYSTACK which have identical content to the file NEEDLE to stdout.Usefull if you are sure you have copied a file onto your NAS, renamed it, but then are no longer to find it.
+
+Example: `bash find-file-by-content.sh /var/media/USB_Storage/DCIM/100CANON/IMG_2935.JPG /shares/`
