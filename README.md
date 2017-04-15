@@ -50,6 +50,6 @@ Example: `php find-not-yet-copied-to-my-cloud.php /var/media/USB_Storage/ /share
 
 Usage: `bash find-file-by-content.sh NEEDLE HAYSTACK`
 
-Prints all files in directory or subdirectory of HAYSTACK which have identical content to the file NEEDLE to stdout.Usefull if you are sure you have copied a file onto your NAS, renamed it, but then are no longer to find it.
+Prints all files in directory or subdirectory of HAYSTACK which have identical content to the file NEEDLE to stdout. Usefull if you are sure you have copied a file onto your NAS, renamed it, but then are no longer able to find it.
 
 Example: `bash find-file-by-content.sh /var/media/USB_Storage/DCIM/100CANON/IMG_2935.JPG /shares/`
